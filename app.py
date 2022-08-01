@@ -147,7 +147,7 @@ def java_POS(tweets):
 
     writeTweet_TXT(tweets)
     print("in javaPOS")
-    filepath = 'C:/Users/HP/Desktop/fypAPI_local/static/javaPOS_run.bat'
+    filepath = './static/javaPOS_run.bat'
 
     p = subprocess.Popen(filepath, shell=True, stdout = subprocess.PIPE)
     rawPOS=p.communicate()
@@ -174,7 +174,7 @@ def java_POS(tweets):
         tweetTXT.append(rawPOSList[i][0])
     print("pos done")
     pos_twt , posCol=changeFormate(tweetTXT,pos)
-
+    print("pos : ",posCol )
     return posCol
 
 # fuction to count Syntactic feature
