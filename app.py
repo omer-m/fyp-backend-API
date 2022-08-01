@@ -147,7 +147,7 @@ def java_POS(tweets):
 
     writeTweet_TXT(tweets)
     print("in javaPOS")
-    filepath = './static/javaPOS_run.bat'
+    filepath = './static/javaPOS_run.sh'
 
     p = subprocess.Popen(filepath, shell=True, stdout = subprocess.PIPE)
     rawPOS=p.communicate()
